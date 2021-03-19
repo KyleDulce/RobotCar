@@ -1,0 +1,2 @@
+npm run start:electron
+npm run start:electronNoBuild
