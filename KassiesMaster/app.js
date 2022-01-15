@@ -13,7 +13,7 @@ function createWindow () {
   win.loadURL("file:///dist/KassiesMaster/index.html");
   win.removeMenu();
 
-  //win.webContents.openDevTools();
+  win.webContents.openDevTools();
 }
 
 app.whenReady().then(createWindow)

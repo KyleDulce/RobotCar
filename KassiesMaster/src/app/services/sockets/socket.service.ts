@@ -1,21 +1,20 @@
 import { Injectable } from '@angular/core';
+declare var require: any;
+var io = require("socket.io-client");
 
 @Injectable({
   providedIn: 'root'
 })
 export class SocketService {
 
-  private static DESTINATION = "http://10.0.0.220:3500";
-  private io;
+  public static DESTINATION = "http://10.0.0.220:3500";
 
   private socket;
 
-  constructor() { 
-    this.io = require("socket.io-client");
-  }
+  constructor() { }
 
   public connect() {
-    this.socket = this.io(SocketService.DESTINATION);
+    this.socket = io(SocketService.DESTINATION);
   }
 
   public connectionStatus(): boolean {

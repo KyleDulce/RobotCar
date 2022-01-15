@@ -1,0 +1,19 @@
+<table>
+    <tr>
+        <td></td>
+        <td><button mat-fab (click)="onMove(1)">Forward</button></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><button mat-fab (click)="onMove(3)">Left</button></td>
+        <td><button mat-fab (click)="onMove(0)">Stop</button></td>
+        <td><button mat-fab (click)="onMove(4)">Right</button></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button mat-fab (click)="onMove(2)">Backward</button></td>
+        <td></td>
+    </tr>
+</table>
+<button mat-fab (click)="grabpic()">Img</button>
+<img src="{{imageLoc}}" alt='not found'>
